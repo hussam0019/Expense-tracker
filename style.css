@@ -1,0 +1,264 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+header {
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e3e8f0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    isolation: isolate;
+}
+
+.drop-down, .date-picker, .export-btn {
+    background: white;
+    border: solid 1px #d1d5db;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    font-size: 0.857rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.export-btn {
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: white;
+    position: relative;
+    border-radius: 8px;
+    transition: background 0.6s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.export-btn::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: calc(100% + 0px);
+    width: calc(100% + 0px);
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, #005295, #880097);
+}
+
+.export-btn:hover {
+    z-index: 1;
+    background: rgba(0, 0, 0, 1);
+}
+
+main {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 350px;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.card-menu {
+    background: none;
+    border: none;
+    color: #2f2b2b;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.amount {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.income-amount {
+    color: #1e293b;
+}
+
+.change {
+    font-size: 0.875rem;
+    color: rgb(89, 196, 89);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.my-card {
+    background: linear-gradient(135deg , #09e9a2 0%, rgba(69, 137, 255, 0.6) 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-chip {
+    width: 32px;
+    height: 24px;
+    background: #fbbf24;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.card-chip::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: #92400e;
+    border-radius: 2px;
+}
+
+.card-number {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+}
+
+.card-logo {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: -8px;
+}
+
+.card-logo-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.logo-red {
+    background: #ef4444;
+}
+
+.logo-orange {
+    background: #f59e0b;
+    margin-left: -8px;
+}
+
+.spending-section {
+    margin-top: 2rem;
+}
+
+.spending-limits {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: black;
+}
+
+.spending-used {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 6px;
+    background: #f3f4f6;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #ea580c;
+    width: 37%;
+    border-radius: 3px;
+}
+
+.chart-section {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.chart-container {
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.chart-bar {
+    width: 40px;
+    background: #e5e7eb;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.chart-bar:active {
+    background: linear-gradient(to top , #ea580c, #fb923c);
+}
+
+.chart-bar-income {
+    background: #10b981;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
+.chart-bar-expense {
+    background: #ea580c;
+    border-radius: 4px;
+}
