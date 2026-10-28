@@ -1,150 +1,295 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="expense-tracker-container">
-        <header>
-            <h1>Good Morning Houssam!</h1>
-            <div class="header-controls">
-                <div class="drop-down">Daily <i class="fas fa-chevron-down"></i></div>
-                <div class="date-picker">
-                    <i class="fas fa-calendar"></i>
-                    16 October 2026
-                </div>
-                <div class="export-btn">
-                    <i class="fas fa-download"></i>
-                    Export
-                </div>
+      <header>
+        <h1>Good Morning Houssam!</h1>
+        <div class="header-controls">
+          <div class="drop-down">Daily <i class="fas fa-chevron-down"></i></div>
+          <div class="date-picker">
+            <i class="fas fa-calendar"></i>
+            16 October 2026
+          </div>
+          <div class="export-btn">
+            <i class="fas fa-download"></i>
+            Export
+          </div>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div class="dashboard-grid">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Monthly Income</h3>
+              <button class="card-menu">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
             </div>
-        </header>
+            <div class="amount income-amount">$2,758.00</div>
+            <div class="change">
+              <i class="fas fa-arrow-up"></i>
+              12% vs last month
+            </div>
+          </div>
 
-        <main class="main-content">
-            <div class="dashboard-grid">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Monthly Income</h3>
-                        <button class="card-menu">
-                            <i class="fas fa-ellipsis-h"></i>
-                        </button>
-                    </div>
-                    <div class="amount income-amount">$2,758.00</div>
-                    <div class="change">
-                        <i class="fas fa-arrow-up"></i>
-                        12% vs last month
-                    </div>
-                </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Monthly Expenses</h3>
+              <button class="card-menu">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+            <div class="amount income-amount">$1,754.00</div>
+            <div class="change">
+              <i class="fas fa-arrow-up"></i>
+              12% vs last month
+            </div>
+          </div>
 
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Monthly Expenses</h3>
-                        <button class="card-menu">
-                            <i class="fas fa-ellipsis-h"></i>
-                        </button>
-                    </div>
-                    <div class="amount income-amount">$1,754.00</div>
-                    <div class="change">
-                        <i class="fas fa-arrow-up"></i>
-                        12% vs last month
-                    </div>
-                </div>
+          <div class="card my-card">
+            <div class="card-header">
+              <h3 class="card-title">My Card</h3>
+              <button class="card-menu" style="color: white">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+            <div style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 1rem">
+              linked to your primary wallet
+            </div>
+            <div class="card-chip"></div>
+            <div class="card-number">5423 2232 1333 0023</div>
+            <div class="card-holder">HOUSSAM ABID</div>
 
-                <div class="card my-card">
-                    <div class="card-header">
-                        <h3 class="card-title">My Card</h3>
-                        <button class="card-menu" style="color: white;">
-                            <i class="fas fa-ellipsis-h"></i>
-                        </button>
-                    </div>
-                    <div style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 1rem;">
-                        linked to your primary wallet
-                    </div>
-                    <div class="card-chip"></div>
-                    <div class="card-number">5423 2232 1333 0023</div>
-                    <div class="card-holder">HOUSSAM ABID</div>
-
-                    <div class="card-logo">
-                        <div class="card-logo-circle logo-red"></div>
-                        <div class="card-logo-circle logo-orange"></div>
-                    </div>
-
-                    <div class="spending-section">
-                        <div style="margin-bottom: 0.5rem; font-size: 0.875rem; opacity: 0.8;">Spending limits</div>
-                        <div class="spending-limits">$4,324.00</div>
-                        <div class="spending-used">used from $14,373.00</div>
-
-                        <div class="progress-bar">
-                            <div class="progress-fill"></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="card-logo">
+              <div class="card-logo-circle logo-red"></div>
+              <div class="card-logo-circle logo-orange"></div>
             </div>
 
-            <div class="chart-section">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Overview</h3>
-                        <div style="display: flex; gap: 1rem;">
-                            <div class="dropdown">Yearly <i class="fas fa-chevron-down"></i></div>
-                            <button class="filter-btn">
-                                <i class="fas fa-filter"></i>
-                                Filter
-                            </button>
-                        </div>
-                    </div>
+            <div class="spending-section">
+              <div
+                style="margin-bottom: 0.5rem; font-size: 0.875rem; opacity: 0.8"
+              >
+                Spending limits
+              </div>
+              <div class="spending-limits">$4,324.00</div>
+              <div class="spending-used">used from $14,373.00</div>
 
-                    <div class="chart-container">
-                        <div class="chart-bar" style="height: 120px;"></div>
-                        <div class="chart-bar" style="height: 80px;"></div>
-                        <div class="chart-bar" style="height: 200px;">
-                            <div style="position: absolute; top: -30px;
-                             left: 50%; transform: translateX(-50%);
-                             background: white; padding: 0.25rem 0.5rem;
-                             border-radius: 4px;
-                             box-shadow: 0 2px 8px rgba(0, 0, 0, ); font-size: 0.75rem;
-                            ">
-                                <div style="font-weight: 600;">April 2022</div>
-                                <div style="color: #10b981;">Income $894</div>
-                                <div style="color: #ea580c;">Expenses $343</div>
-                            </div>
-                            <div class="chart-bar-income" style="height: 120px;"></div>
-                            <div class="chart-bar-expense" style="height: 80px;"></div>
-                        </div> 
-                        <div class="chart-bar" style="height: 150px;"></div>
-                        <div class="chart-bar" style="height: 90px;"></div>
-                        <div class="chart-bar" style="height: 110px;"></div>
-                        <div class="chart-bar" style="height: 130px;"></div>
-                        <div class="chart-bar" style="height: 100px;"></div>
-                        <div class="chart-bar" style="height: 80px;"></div>
-                        <div class="chart-bar" style="height: 140px;"></div>
-                        <div class="chart-bar" style="height: 95px;"></div>
-                    </div>
-
-                    <div class="chart-labels">
-                        <span>Feb</span>
-                        <span>Mar</span>
-                        <span>Apr</span>
-                        <span>May</span>
-                        <span>Jun</span>
-                        <span>Jul</span>
-                        <span>Aug</span>
-                        <span>Sep</span>
-                        <span>Oct</span>
-                        <span>Nov</span>
-                        <span>Dec</span>
-                    </div>
-                </div>
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+              </div>
             </div>
-        </main>
+          </div>
+        </div>
+
+        <div class="chart-section">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Overview</h3>
+              <div style="display: flex; gap: 1rem">
+                <div class="dropdown">
+                  Yearly <i class="fas fa-chevron-down"></i>
+                </div>
+                <button class="filter-btn">
+                  <i class="fas fa-filter"></i>
+                  Filter
+                </button>
+              </div>
+            </div>
+
+            <div class="chart-container">
+              <div class="chart-bar" style="height: 120px"></div>
+              <div class="chart-bar" style="height: 80px"></div>
+              <div class="chart-bar" style="height: 200px">
+                <div
+                  style="
+                    position: absolute;
+                    top: -30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: white;
+                    padding: 0.25rem 0.5rem;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                    font-size: 0.75rem;
+                  "
+                >
+                  <div style="font-weight: 600">April 2022</div>
+                  <div style="color: #10b981">Income $894</div>
+                  <div style="color: #ea580c">Expenses $343</div>
+                </div>
+                <div class="chart-bar-income" style="height: 120px"></div>
+                <div class="chart-bar-expense" style="height: 80px"></div>
+              </div>
+              <div class="chart-bar" style="height: 150px"></div>
+              <div class="chart-bar" style="height: 90px"></div>
+              <div class="chart-bar" style="height: 110px"></div>
+              <div class="chart-bar" style="height: 130px"></div>
+              <div class="chart-bar" style="height: 100px"></div>
+              <div class="chart-bar" style="height: 80px"></div>
+              <div class="chart-bar" style="height: 140px"></div>
+              <div class="chart-bar" style="height: 95px"></div>
+            </div>
+
+            <div class="chart-labels">
+              <span>Feb</span>
+              <span>Mar</span>
+              <span>Apr</span>
+              <span>May</span>
+              <span>Jun</span>
+              <span>Jul</span>
+              <span>Aug</span>
+              <span>Sep</span>
+              <span>Oct</span>
+              <span>Nov</span>
+              <span>Dec</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">All Expenses</h3>
+              <button class="card-menu">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+            <div
+              style="font-size: 0.75rem; color: #6b7280; margin-bottom: 1rem"
+            >
+              Spending break down by category
+            </div>
+
+            <div class="expenses-breakdown">
+              <div class="total-expenses">$24,800.00</div>
+              <div class="period-tabs">
+                <span class="period-tab">Daily</span>
+                <span class="period-tab">Weekly</span>
+                <span class="period-tab active">Monthly</span>
+              </div>
+
+              <div class="period-amounts">
+                <span>Daily</span>
+                <span>Weekly</span>
+                <span>Monthly</span>
+              </div>
+
+              <div class="period-values">
+                <span>$1,343.00</span>
+                <span>$2,323.00</span>
+                <span>$3,232.00</span>
+              </div>
+
+              <div class="color-bar"></div>
+
+              <div class="expense-categories">
+                <ul class="expense-categories">
+                  <li class="expense-category">
+                    <div class="category-info">
+                      <div class="category-dot dot-food"></div>
+                      <span>Food &amp; Health</span>
+                    </div>
+                    <span>837</span>
+                  </li>
+
+                  <li class="expense-category">
+                    <div class="category-info">
+                      <div class="category-dot dot-entertainment"></div>
+                      <span>Entertainment</span>
+                    </div>
+                    <span>2322</span>
+                  </li>
+
+                  <li class="expense-category">
+                    <div class="category-info">
+                      <div class="category-dot dot-shopping"></div>
+                      <span>Shopping</span>
+                    </div>
+                    <span>2321</span>
+                  </li>
+
+                  <li class="expense-category">
+                    <div class="category-info">
+                      <div class="category-dot dot-investment"></div>
+                      <span>Investment</span>
+                    </div>
+                    <span>1248</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card transaction-secion">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Recent Transactions</h3>
+              <div class="filters">
+                <button class="filter-btn">
+                  <i class="fas fa-sort"></i>
+                  Sort
+                </button>
+                <button class="filter-btn">
+                  <i class="fas fa-filter"></i>
+                  Filter
+                </button>
+              </div>
+            </div>
+
+                <table class="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Date <i class="fas fa-sort"></i></th>
+                        <th>Category <i class="fas fa-sort"></i></th>
+                        <th>Amount <i class="fas fa-sort"></i></th>
+                        <th>Status</th>
+                        <th>Action</th> 
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Jan 12, 2027</td>
+                        <td>Subscription</td>
+                        <td>$440.00</td>
+                        <td><span class="status-seccess">seccess</span></td>
+                        <td><button class="action-btn"><i class="fas fa-ellipsis-h"></i></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Jan 12, 2027</td>
+                        <td>Subscription</td>
+                        <td>$440.00</td>
+                        <td><span class="status-seccess">seccess</span></td>
+                        <td><button class="action-btn"><i class="fas fa-ellipsis-h"></i></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Jan 12, 2027</td>
+                        <td>Subscription</td>
+                        <td>$440.00</td>
+                        <td><span class="status-seccess">seccess</span></td>
+                        <td><button class="action-btn"><i class="fas fa-ellipsis-h"></i></button></td>
+                    </tr>
+                </tbody>
+                </table>
+
+          </div>
+        </div>
+      </main>
     </div>
-</body>
 
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -77,6 +77,7 @@ main {
     padding: 2rem;
     max-width: 1400px;
     margin: 0 auto;
+
 }
 
 .dashboard-grid {
@@ -261,4 +262,166 @@ main {
 .chart-bar-expense {
     background: #ea580c;
     border-radius: 4px;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.expenses-breakdown {
+    margin-top: 1rem;
+}
+
+.total-expenses {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.period-tabs {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.period-tabs {
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.period-tab.active {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.period-amounts {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.period-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.color-bar {
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #fb923c, #f59e0b, #eab308, #10b981);
+    margin-bottom: 1rem;
+}
+
+.expense-categories {
+    list-style: none;
+}
+
+.expense-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.category-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.category-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.dot-food {
+    background: #ea580c;
+}
+
+.dot-entertainment {
+     background: #f59e0b;
+}
+
+.dot-shopping {
+    background: #10b981;
+}
+
+.dot-investment {
+    background: #09e9a2;
+}
+
+.transaction-secion {
+    grid-column:  1/ -1;
+    margin-top: 2rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-btn {
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.transaction-table th {
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6b7280;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.transaction-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.status-seccess {
+    background: #dcfce7;
+    color: #16a34a;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.25rem;
 }
