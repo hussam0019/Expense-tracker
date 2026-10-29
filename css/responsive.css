@@ -1,0 +1,140 @@
+/* Tablet */
+@media (max-width : 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .my-card {
+        grid-column: 1 / -1;
+    }
+
+    .chart-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width : 780px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .header-controls {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .dashboard-grid,
+    .chart-section {
+        gap: 1rem;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        margin-bottom: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .transaction-secion {
+        margin-top: 1rem;
+    }
+
+    .transaction-secion > .card {
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .transaction-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .transaction-table th,
+    .transaction-table td {
+        padding: 0.75rem;
+    }
+
+    .period-tabs {
+        gap: 1rem;
+    }
+
+    .add-buttons {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .fab {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 1rem;
+    }
+}
+
+/* Small phones */
+@media (max-width : 480px) {
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    .amount {
+        font-size: 1.5rem;
+    }
+
+    .total-expenses {
+        font-size: 1.5rem;
+    }
+
+    .card-number {
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .card-header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .chart-container {
+        height: 240px;
+        padding: 0.5rem;
+    }
+
+    .chart-bar {
+        width: 20px;
+    }
+
+    .chart-labels {
+        font-size: 0.65rem;
+    }
+
+    .period-values,
+    .period-amounts {
+        font-size: 0.8rem;
+    }
+
+    .modal-footer {
+        flex-direction: column-reverse;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+    }
+}
